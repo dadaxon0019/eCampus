@@ -26,11 +26,14 @@ class MainPages extends StatelessWidget {
           centerTitle: true,
           title: Text('eCampus',style: TextStyle(color: Colors.black,fontWeight: FontWeight.w400),),
           actions: <Widget>[
-          InkResponse(
-                 radius: 20,
-                 onTap: ()=>{},
-                   child: Icon(Icons.notifications_none_outlined,size: 28,color: Colors.black,)
-               ),
+          Container(
+            padding: const EdgeInsets.only(right: 10),
+            child: InkResponse(
+                   radius: 20,
+                   onTap: ()=>{},
+                     child: Icon(Icons.notifications_none_outlined   ,size: 28,color: Colors.black,)
+                 ),
+          ),
           ],
         ),
 
@@ -114,6 +117,13 @@ class MainPages extends StatelessWidget {
                       fontSize: 17,
                       color: Colors.white
                     ),
+                  ),
+                ),
+                const TextField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'Password',
                   ),
                 ),
                 SizedBox(height: 20,),
